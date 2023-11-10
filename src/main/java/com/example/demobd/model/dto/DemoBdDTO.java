@@ -9,6 +9,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PruebaDTO {
+public class DemoBdDTO {
     private String nombre;
 }
