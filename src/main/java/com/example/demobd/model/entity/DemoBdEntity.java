@@ -12,6 +12,7 @@ public class DemoBdEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", unique = true)
     private long id;
 
     @Column(name = "nombre")

@@ -12,10 +12,14 @@ import java.util.List;
 @Service
 public class DemoBdServiceImpl implements IDemoBdService {
 
+    private final DemoBdRepository demoBdRepository;
+    private final DemoBdUtil demoBdUtil;
+
     @Autowired
-    DemoBdRepository demoBdRepository;
-    @Autowired
-    DemoBdUtil demoBdUtil;
+    public DemoBdServiceImpl(DemoBdRepository demoBdRepository, DemoBdUtil demoBdUtil) {
+        this.demoBdRepository = demoBdRepository;
+        this.demoBdUtil = demoBdUtil;
+    }
 
     @Override
     public List<DemoBdDTO> getAllUsers() {

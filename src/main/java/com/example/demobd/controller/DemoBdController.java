@@ -14,8 +14,13 @@ import java.util.List;
 @RequestMapping("/demo-bd")
 public class DemoBdController {
 
+
+    private final IDemoBdService iDemoBdService;
+
     @Autowired
-    IDemoBdService iDemoBdService;
+    public DemoBdController(IDemoBdService iDemoBdService) {
+        this.iDemoBdService = iDemoBdService;
+    }
 
     @GetMapping
     public ResponseEntity<List<DemoBdDTO>> getAllUsers() {
