@@ -37,4 +37,9 @@ public class DemoBdController {
         return new ResponseEntity<>(iDemoBdService.createUser(demoBdEntity), HttpStatus.OK);
     }
 
+    @GetMapping("/query")
+    public ResponseEntity<List<DemoBdDTO>> getUserQuery(@RequestParam String name) {
+        return new ResponseEntity<>(iDemoBdService.getUser(name), HttpStatus.OK);
+    }
+
 }

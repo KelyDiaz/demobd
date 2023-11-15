@@ -10,5 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DemoBdDTO {
+    private long id;
     private String nombre;
 }

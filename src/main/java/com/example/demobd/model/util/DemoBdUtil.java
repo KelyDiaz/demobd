@@ -13,6 +13,7 @@ public class DemoBdUtil {
         List<DemoBdDTO> demoBdDTOS = new ArrayList<>();
         for (DemoBdEntity demoBdEntity1 : demoBdEntity) {
             DemoBdDTO demoBdDTO = new DemoBdDTO();
+            demoBdDTO.setId(demoBdEntity1.getId());
             demoBdDTO.setNombre(demoBdEntity1.getName());
             demoBdDTOS.add(demoBdDTO);
         }
@@ -21,6 +22,7 @@ public class DemoBdUtil {
 
     public DemoBdDTO createUserMapper(DemoBdEntity demoBdEntity) {
         DemoBdDTO demoBdDTO = new DemoBdDTO();
+        demoBdDTO.setId(demoBdEntity.getId());
         demoBdDTO.setNombre(demoBdEntity.getName());
         return demoBdDTO;
     }
