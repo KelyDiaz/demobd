@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface IDemoBdService {
     List<DemoBdDTO> getAllUsers();
+
     List<DemoBdDTO> getUser(String name);
 
     DemoBdDTO createUser(DemoBdEntity demoBdEntity);
