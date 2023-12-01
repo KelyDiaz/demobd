@@ -60,8 +60,7 @@ GET /demo-bd
 Cuerpo de ejemplo:
 ```
 {
-  "nombre": "Nuevo Elemento",
-  "descripcion": "Descripción del nuevo elemento"
+    "name": "prueba"
 }
 
 ```
