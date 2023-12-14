@@ -36,21 +36,75 @@
 		},
 		{
 			"name": "get for name path",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"prueba\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "S",
+						"type": "text"
+					},
+					{
+						"key": "system",
+						"value": "S",
+						"type": "text"
+					},
+					{
+						"key": "country",
+						"value": "CO",
+						"type": "text"
+					},
+					{
+						"key": "lang",
+						"value": "ES",
+						"type": "text"
+					},
+					{
+						"key": "entity",
+						"value": "S",
+						"type": "text"
+					},
+					{
+						"key": "subsystem",
+						"value": "S",
+						"type": "text"
+					},
+					{
+						"key": "originator",
+						"value": "S",
+						"type": "text"
+					},
+					{
+						"key": "userid",
+						"value": "S",
+						"type": "text"
+					},
+					{
+						"key": "operation",
+						"value": "GET",
+						"type": "text"
+					},
+					{
+						"key": "destination",
+						"value": "S",
+						"type": "text"
+					},
+					{
+						"key": "execId",
+						"value": " 550e8400-e29b-41d4-a716-446655440004",
+						"type": "text"
+					},
+					{
+						"key": "timestamp",
+						"value": "2014-01-31T09:30:47.233-05:00",
+						"type": "text"
+					},
+					{
+						"key": "msgType",
+						"value": "S",
+						"type": "text"
 					}
-				},
+				],
 				"url": "http://localhost:8081/demo-bd/kely"
 			},
 			"response": []

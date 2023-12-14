@@ -1,9 +1,11 @@
 package com.example.demobd.controller;
 
+import com.example.demobd.common.utils.HeadersUtilities;
 import com.example.demobd.model.dto.DemoBdDTO;
 import com.example.demobd.model.entity.DemoBdEntity;
 import com.example.demobd.model.service.IDemoBdService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,10 +18,12 @@ public class DemoBdController {
 
 
     private final IDemoBdService iDemoBdService;
+    private final HeadersUtilities headersUtilities;
 
     @Autowired
-    public DemoBdController(IDemoBdService iDemoBdService) {
+    public DemoBdController(IDemoBdService iDemoBdService, HeadersUtilities headersUtilities) {
         this.iDemoBdService = iDemoBdService;
+        this.headersUtilities = headersUtilities;
     }
 
     @GetMapping
@@ -28,7 +32,8 @@ public class DemoBdController {
     }
 
     @GetMapping("{name}")
-    public ResponseEntity<List<DemoBdDTO>> getUser(@PathVariable String name) {
+    public ResponseEntity<List<DemoBdDTO>> getUser(@RequestHeader HttpHeaders headers, @PathVariable String name) {
+        headersUtilities.validateHeaders(headers);
         return new ResponseEntity<>(iDemoBdService.getUser(name), HttpStatus.OK);
     }
 
